@@ -9,6 +9,13 @@ const request = require(`request`)
 //    - Coordinate error, pass string for error
 //    - Success, pass forecast string for data (same format as from before)
 
+
+/*NEW FEATURE DEPLOYEMENT WORKFLOW
+CHALLENGE
+-update the forecast string to include new data
+-commit changes
+-push to git & heroku
+-test on prod */
 const forecast = ((long, lat, callback) => {
     const url = `https://api.weatherstack.com/current?access_key=eaed4223001cf199687b1ef19fff356d&query=${lat},${long}&units=f`
     request({url, json: true}, (error, {body}) => {
@@ -17,7 +24,7 @@ const forecast = ((long, lat, callback) => {
         } else if(body.error) {
             callback(`No matching result, please enter a valid loction`, undefined)
         } else {
-            callback(undefined, `${body.current.weather_descriptions[0]}. Its currently ${body.current.temperature} degrees. It feels like ${body.current.feelslike} degrees out.`)
+            callback(undefined, `${body.current.weather_descriptions[0]}. Its currently ${body.current.temperature} degrees. It feels like ${body.current.feelslike} degrees out. There's a ${body.current.precip}% chance of rain`)
         }
     })
 })
