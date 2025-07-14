@@ -1,4 +1,3 @@
-console.log(`Client side JS file is loaded`)
 /*fetch is NOT apart of JS it's a browser based api, meaining we can use it in all modern brownser
 its not accessible in node js, so this code cant be used in a backend node script*/
 //i had to use a different link than the once in the course
