@@ -1,0 +1,20 @@
+ <!DOCTYPE html>
+
+ <html>
+    <head>
+      <title>Help</title>
+      <link rel="icon" href="/images/weather.png">
+      <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    
+    <body>
+      <div class="main-content">
+      {{>header}}
+        {{!-- to include a partial we do the same as we would do for hbs but b4 we do, we use ">" and only include the filename without the file extension, and we dont need the filepath either --}}
+
+        <p>{{body}}</p>
+
+      </div>
+        {{>footer}}
+    </body>
+ </html>

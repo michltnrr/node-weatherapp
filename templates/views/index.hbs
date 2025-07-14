@@ -1,0 +1,31 @@
+ <!DOCTYPE html>
+
+ <html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/images/weather.png">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    
+    <body>
+        {{!-- to make this dynamic and not static, we;re gonna provide a value for the title instead of hard coding it --}}
+        {{!-- if we wanna inject a val in a hbs file, we open & close 2 curly braces--}}
+
+        <div class="main-content">
+       
+            {{>header}}
+                <p>Use this site to get ur weather nigga</p>
+
+                <form>
+                    <input placeholder="location">
+                    <button id="search">Search</button>
+                </form>
+        
+            <p id="p1"></p>
+            <p id="p2"></p>
+        </div>
+       {{>footer}}
+      
+        <script src="/js/app.js"></script>
+    </body>
+ </html>
