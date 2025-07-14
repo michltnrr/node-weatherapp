@@ -16,7 +16,7 @@ const message2 = document.querySelector(`#p2`)
 
 
 async function getWeather(location) {
-    const request = await fetch(`http://localhost:3000/weather?address=${location}`)
+    const request = await fetch(`/weather?address=${location}`)
     const data = await request.json()
     if(data.error) {
         message1.textContent = data.error
